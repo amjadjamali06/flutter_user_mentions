@@ -15,7 +15,7 @@ class CustomMentionTextParser extends StatelessWidget {
     this.onMentionedUserClick,
     this.fontSize,
     this.textColor = Colors.black,
-    this.mentionedTextColor = Colors.blue,
+    this.mentionedTextColor = const Color(0x000d47a1),
   });
 
   @override
@@ -30,7 +30,7 @@ class CustomMentionTextParser extends StatelessWidget {
               return TextSpan(
                 text: user.last,
                 style: TextStyle(
-                  color: Colors.blue.shade900,
+                  color: mentionedTextColor,
                   fontWeight: FontWeight.bold,
                   fontSize: fontSize,
                 ),
@@ -46,7 +46,7 @@ class CustomMentionTextParser extends StatelessWidget {
                       text: i>1?"__)${words[i]}":words[i],
                       style: TextStyle(
                         fontSize: fontSize,
-                        color: Colors.black,
+                        color: textColor,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
