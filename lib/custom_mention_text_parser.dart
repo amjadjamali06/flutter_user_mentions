@@ -15,7 +15,7 @@ class CustomMentionTextParser extends StatelessWidget {
     this.onMentionedUserClick,
     this.fontSize,
     this.textColor = Colors.black,
-    this.mentionedTextColor = const Color(0x000d47a1),
+    this.mentionedTextColor = const Color(0xff0d47a1),
   });
 
   @override
