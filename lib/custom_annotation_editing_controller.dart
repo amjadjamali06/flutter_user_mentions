@@ -1,4 +1,4 @@
-part of flutter_mentions;
+part of flutter_user_mentions;
 
 class CustomAnnotationEditingController extends TextEditingController {
   Map<String, Annotation> _mapping;

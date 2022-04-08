@@ -1,4 +1,4 @@
-part of flutter_mentions;
+part of flutter_user_mentions;
 
 /*Created By: Amjad Jamali on 21-Mar-2022*/
 

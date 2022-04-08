@@ -1,4 +1,4 @@
-part of flutter_mentions;
+part of flutter_user_mentions;
 
 class FlutterCustomMentions extends StatefulWidget {
   const FlutterCustomMentions({
