@@ -263,8 +263,9 @@ class FlutterCustomMentionsState extends State<FlutterCustomMentions> {
             suggestionListDecoration: widget.suggestionListDecoration,
             data: list.data.where((element) {
               final ele = element['display'].toLowerCase();
+              final full = element['full_name'].toLowerCase();
               final str = _selectedMention!.str.toLowerCase().replaceAll(RegExp(_pattern), '');
-              return ele == str ? true : ele.contains(str);
+              return ele == str ? true : ele.contains(str) || full.contains(str);
             }).toList(),
 
             onTap: (value) {

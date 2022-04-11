@@ -54,7 +54,6 @@ class CustomAnnotationEditingController extends TextEditingController {
     result.sort((b,a) => a.toLowerCase().compareTo(b.toLowerCase()));
     _pattern = result.join('|');
 
-    // print('------------> mapping ${this._mapping}'); // called once during build
   }
 
 
@@ -92,8 +91,6 @@ class CustomAnnotationEditingController extends TextEditingController {
         },
       );
     }
-
-    print('══════════════════════════> $text');
 
     return TextSpan(style: style, children: children);
   }

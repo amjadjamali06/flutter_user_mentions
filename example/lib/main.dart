@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portal/flutter_portal.dart';
 import 'package:flutter_user_mentions/flutter_user_mentions.dart';
 
-
-
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -16,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       builder: (_, child) => Portal(child: child!),
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -99,8 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
             if(clickedItem.isNotEmpty)
               buildSuggestionItem(clickedItem),
 
-            // const SizedBox(height: 24),
-
             CustomMentionTextParser(text: text,onMentionedUserClick: (id){
               for(var item in data){
                 if(item["id"]==id) {
@@ -109,12 +104,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 }
               }
-
             }),
 
-            // const SizedBox(height: 24),
-
-            RaisedButton(
+            ElevatedButton(
               child: const Text('Get Text'),
               onPressed: () {
                 setState(() {
